@@ -1,0 +1,18 @@
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:560px){ .grid2{ grid-template-columns:1fr; } }
+.note{
+  margin-top:12px; font-size:12px; color:var(--yellow); line-height:1.6;
+  border:1px dashed #ffd00055; background:#ffd0000d; padding:10px 12px; border-radius:10px;
+}
+input[type=number]{
+  width:100%; background:#07090f; border:1px solid #232b3d; color:#fff;
+  padding:13px 15px; font-family:'Share Tech Mono',monospace; font-size:16px;
+  border-radius:10px; outline:none; transition:.2s;
+}
+input[type=number]:focus{ border-color:var(--green); box-shadow:0 0 14px #00ff8833; }
+.btn-test{
+  color:#000; background:linear-gradient(90deg,var(--cyan),#0088aa);
+  box-shadow:0 0 20px #00e5ff33;
+}
+.btn-test:hover:not(:disabled){ transform:translateY(-2px); box-shadow:0 0 32px #00e5ff66; }
+.btn-test:disabled{ opacity:.4; cursor:not-allowed; }

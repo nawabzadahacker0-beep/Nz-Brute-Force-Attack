@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brute Force Attack By Nawab Zada Hacker ☠️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<div class="container">
+
+  <div class="banner">
+    <div class="top-tag">Password Cracking</div>
+    <h1 class="title">Brute Force Attack</h1>
+    <div class="dev">Developer  <b>Nawab Zada Hacker</b> ☠️🙌🦅</div>
+    <div class="disc">⚠️This Tool is Only For Educations perpose please dont use wrong.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">Select Target Platform</div>
+    <div class="platforms" id="platforms"></div>
+    <div class="note">platform change just password flow.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title"> Attack Target <span style="color:var(--dim);font-size:11px;">(☠️🙌🦅)</span></div>
+    <div class="grid2">
+      <div>
+        <label>👤 Username / Phone / Email *</label>
+        <input type="text" id="target" placeholder="e.g. admin" autocomplete="off">
+      </div>
+      <div>
+        <label>Login URL (POST endpoint) *</label>
+        <input type="text" id="url" value="http://127.0.0.1:8080/login" placeholder="http://127.0.0.1:8080/login" autocomplete="off">
+      </div>
+      <div>
+        <label>Username</label>
+        <input type="text" id="uField" value="username" autocomplete="off">
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="text" id="pField" value="password" autocomplete="off">
+      </div>
+      <div>
+        <label>Success Text</label>
+        <input type="text" id="okText" value="Welcome" autocomplete="off">
+      </div>
+      <div>
+        <label>❌ Failure Text</label>
+        <input type="text" id="failText" value="Invalid" autocomplete="off">
+      </div>
+      <div>
+        <label>Threads</label>
+        <input type="number" id="threads" value="4" min="1" max="10">
+      </div>
+      <div>
+        <label>Delay (ms) between batches</label>
+        <input type="number" id="delay" value="0" min="0" max="5000">
+      </div>
+    </div>
+    <div class="note">⚠️ <b>Real</b>Brute<b>Force</b>Attack</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">Attack Mode</div>
+    <div class="modes">
+      <div class="mode sel" id="modeAuto">
+        <b>Auto Password Generator</b>
+        <small>Selected Password list</small>
+      </div>
+      <div class="mode" id="modeCustom">
+        <b>My Password List</b>
+        <small>Paste our password list</small>
+      </div>
+    </div>
+    <div id="customWrap">
+      <label>paste Your password list here:</label>
+      <textarea id="customList" placeholder="password123&#10;pakistan1947&#10;nawabzada@123&#10;..."></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">Select Attack</div>
+    <div class="engines" id="engines"></div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-start" id="btnStart">Start Brute Force Attack</button>
+    <button class="btn btn-stop" id="btnStop" disabled>🛑 Stop</button>
+    <button class="btn btn-test" id="btnTest">Endpoint</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="v" id="stAttempts">0</div><div class="k">Attempts</div></div>
+    <div class="stat"><div class="v" id="stSpeed">0</div><div class="k">Passwords / Sec</div></div>
+    <div class="stat"><div class="v" id="stTime">0s</div><div class="k">Elapsed</div></div>
+    <div class="stat"><div class="v" id="stPool">0</div><div class="k">Passwords In Pool</div></div>
+    <div class="stat"><div class="v" id="stStatus">IDLE</div><div class="k">Status</div></div>
+  </div>
+  <div class="bar-wrap"><div class="bar" id="bar"></div></div>
+  <div class="bar-info"><span id="barPct">0%</span><span id="barTxt">Ready...</span></div>
+
+  <div id="term"></div>
+</div>
+
+<div id="modal">
+  <div class="modal-box">
+    <span class="m-ico">✅</span>
+    <div class="m-title">Password Cracked<br>Successfully!</div>
+    <div class="m-sub">
+      Target : <b id="mTarget">—</b> &nbsp;|&nbsp; Platform : <b id="mPlat">—</b><br>
+      Engine : <b id="mEng">—</b> &nbsp;|&nbsp; Total Attempts : <b id="mAtt">—</b><br>
+      Cracked Password :
+    </div>
+    <div class="m-pass" id="mPass">—</div>
+    <div class="m-by">By Nawab Zada Hacker ☠️ ✌️</div>
+    <button class="m-close" id="mClose">OK</button>
+  </div>
+</div>
+
+<footer>
+  ⚠️ <b>Disclaimer:</b> This tool is Just for testing.<br>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
